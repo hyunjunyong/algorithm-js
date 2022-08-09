@@ -32,3 +32,8 @@ isPalindrome(1000021);
 
 // Runtime: 300 ms, faster than 37.79% of JavaScript online submissions for Palindrome Number.
 // Memory Usage: 50.8 MB, less than 74.91% of JavaScript online submissions for Palindrome Number.
+
+//  var isPalindrome = function(x) {
+//   if(+(x.toString().split('').reverse().join('')) !== x) return false;
+//   else return true;
+// };
