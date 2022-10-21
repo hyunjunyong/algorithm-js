@@ -30,4 +30,4 @@ console.log(reverseList([1, 2]));
 //   }
 //   return answer;
 // }; 그냥 순수 배열일떄 이렇게
-// ReverseLinkedList.js  206
+// ReverseLinkedList.js  206 공부필요
