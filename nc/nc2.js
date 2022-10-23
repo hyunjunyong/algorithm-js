@@ -3,7 +3,7 @@ function solution(nums) {
   let answer = [...new Set(nums)];
   let answer1 = [...answer];
   while (nums.length > 0) {
-    console.log(answer);
+    console.log(answer1);
     for (i = 0; i < answer.length; i++) {
       nums.splice(nums.indexOf(answer[i]), 1);
     }
