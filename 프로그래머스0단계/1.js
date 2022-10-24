@@ -119,3 +119,34 @@ function solution(my_string) {
 function solution(num_list) {
   return num_list.reverse();
 }
+
+// 짝수 홀수 갯수
+function solution(num_list) {
+  let a = 0;
+  let b = 0;
+  num_list.map((item) => {
+    item % 2 === 0 ? a++ : b++;
+  });
+  return [a, b];
+}
+
+function solution(my_string, letter) {
+  return my_string
+    .split('')
+    .filter((e) => e != letter)
+    .join('');
+}
+
+//피ㅏ자 나눠먹기3
+function solution(slice, n) {
+  return Math.ceil(n / slice);
+}
+
+//배열 원소의 길이
+function solution(strlist) {
+  var answer = [];
+  strlist.map((item) => {
+    answer.push(item.split('').length);
+  });
+  return answer;
+}
