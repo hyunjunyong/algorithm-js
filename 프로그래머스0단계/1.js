@@ -195,3 +195,32 @@ function solution(sides) {
 function solution(n) {
   return Math.ceil(n / 7);
 }
+
+// 점의 위치 구하기
+function solution(dot) {
+  if (dot[0] < 0) {
+    return dot[1] < 0 ? 3 : 2;
+  }
+  if (dot[0] > 0) {
+    return dot[1] < 0 ? 4 : 1;
+  }
+}
+
+// n의 배수 고르기
+function solution(n, numlist) {
+  return numlist.filter((e) => e % n === 0);
+}
+
+// 중앙값 구하기
+function solution(array) {
+  array.sort((a, b) => a - b);
+  return array[(array.length - 1) / 2];
+}
+
+// 옷가게 할인 받기
+function solution(price) {
+  if (price >= 500000) return Math.floor(price * 0.8);
+  if (price >= 300000) return Math.floor(price * 0.9);
+  if (price >= 100000) return Math.floor(price * 0.95);
+  return price;
+}
