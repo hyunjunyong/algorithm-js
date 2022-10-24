@@ -253,3 +253,37 @@ function solution(my_string) {
     .map((e) => (e.toUpperCase() === e ? e.toLowerCase() : e.toUpperCase()))
     .join('');
 }
+
+//문자열 정렬하기 (2)
+function solution(my_string) {
+  return my_string
+    .split('')
+    .map((e) => e.toLowerCase())
+    .sort()
+    .join('');
+}
+
+//짝수는 싫어요
+function solution(n) {
+  let answer = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 1) answer.push(i);
+  }
+  return answer;
+}
+
+// 순서쌍의 개수
+function solution(n) {
+  var answer = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) answer++;
+  }
+  return answer;
+}
+
+// 문자열 정렬하기 (1)
+function solution(my_string) {
+  return Array.from(my_string.replace(/[^0-9]/g, ''))
+    .sort((a, b) => a - b)
+    .map((e) => (e = Number(e)));
+}
