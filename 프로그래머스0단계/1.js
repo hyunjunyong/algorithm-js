@@ -62,3 +62,31 @@ function solution(array, n) {
   });
   return answer;
 }
+
+//짝수합
+function solution(n) {
+  let sum = 0;
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 === 0) sum += i;
+  }
+  return sum;
+}
+
+//양꼬치
+function solution(n, k) {
+  return 12000 * n + 2000 * (k - parseInt(n / 10));
+}
+
+//더키큰사람
+function solution(array, height) {
+  let i = 0;
+  array.map((item) => {
+    if (item > height) i++;
+  });
+  return i;
+}
+
+//편지
+function solution(message) {
+  return message.split('').length * 2;
+}
