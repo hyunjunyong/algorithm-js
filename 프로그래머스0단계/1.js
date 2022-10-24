@@ -173,3 +173,25 @@ function solution(n) {
 function solution(n, t) {
   return n * Math.pow(2, t);
 }
+
+//문자열 안에 문자열
+function solution(str1, str2) {
+  return str1.includes(str2) > 0 ? 1 : 2;
+}
+
+//최댓값만들기 1
+function solution(numbers) {
+  numbers.sort((a, b) => a - b);
+  return numbers[numbers.length - 1] * numbers[numbers.length - 2];
+}
+
+// 삼각형의 완성조건 (1)
+function solution(sides) {
+  sides.sort((a, b) => a - b);
+  return sides[0] + sides[1] > sides[2] ? 1 : 2;
+}
+
+// 피자 나눠 먹기 (1)
+function solution(n) {
+  return Math.ceil(n / 7);
+}
