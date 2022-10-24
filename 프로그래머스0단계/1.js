@@ -224,3 +224,32 @@ function solution(price) {
   if (price >= 100000) return Math.floor(price * 0.95);
   return price;
 }
+
+// 배열 자르기
+function solution(numbers, num1, num2) {
+  return numbers.filter((e, i) => i >= num1 && i <= num2);
+}
+
+// 모음 제거
+function solution(my_string) {
+  let a = my_string.split('');
+  a = a.filter((e) => {
+    return e !== 'a' && e !== 'e' && e !== 'i' && e !== 'o' && e !== 'u';
+  });
+  return a.join('');
+}
+
+//문자 반복 출력하기
+function solution(my_string, n) {
+  return my_string
+    .split('')
+    .map((e) => e.repeat(n))
+    .join('');
+}
+
+// 대문자와 소문자
+function solution(my_string) {
+  return Array.from(my_string)
+    .map((e) => (e.toUpperCase() === e ? e.toLowerCase() : e.toUpperCase()))
+    .join('');
+}
