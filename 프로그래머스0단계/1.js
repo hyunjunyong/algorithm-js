@@ -90,3 +90,32 @@ function solution(array, height) {
 function solution(message) {
   return message.split('').length * 2;
 }
+
+//자릿수 합
+function solution(n) {
+  let sum = 0;
+  while (n > 0) {
+    sum += n % 10;
+    n = parseInt(n / 10);
+  }
+  return sum;
+}
+
+// 가장큰수 찾기
+function solution(array) {
+  return [Math.max(...array), array.indexOf(Math.max(...array))];
+}
+
+//문자열 뒤집기
+function solution(my_string) {
+  let a = my_string.split('');
+  let b = [];
+  for (let i = a.length - 1; i >= 0; i--) {
+    b.push(a[i]);
+  }
+  return b.join('');
+}
+// 배열뒤집기
+function solution(num_list) {
+  return num_list.reverse();
+}
