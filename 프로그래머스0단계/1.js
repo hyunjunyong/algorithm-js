@@ -150,3 +150,26 @@ function solution(strlist) {
   });
   return answer;
 }
+
+// 배열 두배만들기
+function solution(numbers) {
+  let answer = numbers.map((e) => {
+    return e * 2;
+  });
+  return answer;
+}
+
+//아이스 아메리카노
+function solution(money) {
+  return [parseInt(money / 5500), money - 5500 * parseInt(money / 5500)];
+}
+
+//제곱근판별
+function solution(n) {
+  return Math.sqrt(n) % 1 === 0 ? 1 : 2;
+}
+
+//세균 증식
+function solution(n, t) {
+  return n * Math.pow(2, t);
+}
