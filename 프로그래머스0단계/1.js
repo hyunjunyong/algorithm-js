@@ -338,3 +338,42 @@ rl.on('line', function (line) {
     console.log('*'.repeat(i));
   }
 });
+
+// 인덱스 바꾸기
+function solution(my_string, num1, num2) {
+  var answer = [...my_string];
+  [answer[num1], answer[num2]] = [answer[num2], answer[num1]];
+  return answer.join('');
+}
+
+// 가위 바위 보
+function solution(rsp) {
+  let answer = [];
+  answer = [...rsp];
+  let answer1 = [];
+  answer.map((e) => {
+    if (e === '2') answer1.push('0');
+    if (e === '5') answer1.push('2');
+    if (e === '0') answer1.push('5');
+  });
+  return answer1.join('');
+}
+
+// 369게임
+function solution(order) {
+  let sum = 0;
+  [...String(order)].map((e) => {
+    if (e === '3' || e === '6' || e === '9') sum++;
+  });
+  return sum;
+}
+
+// 외계행성의 나이
+function solution(age) {
+  let a = [...String(age)];
+  let b = [];
+  a.map((e) => {
+    b.push(String.fromCharCode(Number('a'.charCodeAt(0)) + +e));
+  });
+  return b.join('');
+}
