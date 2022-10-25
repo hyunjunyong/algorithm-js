@@ -377,3 +377,38 @@ function solution(age) {
   });
   return b.join('');
 }
+
+// 배열 회전시키기
+function solution(numbers, direction) {
+  direction === 'right'
+    ? (numbers.unshift(numbers[numbers.length - 1]), numbers.pop())
+    : (numbers.push(numbers[0]), numbers.shift());
+  return numbers;
+}
+
+//약수 구하기
+function solution(n) {
+  var answer = [];
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0) answer.push(i);
+  }
+  return answer;
+}
+
+// 7의 개수
+function solution(array) {
+  let answer = 0;
+  [...array.join('')].map((e) => {
+    if (e === '7') answer++;
+  });
+  return answer;
+}
+
+// 주사위의 개수
+function solution(box, n) {
+  var answer = 1;
+  for (let i = 0; i < box.length; i++) {
+    answer *= parseInt(box[i] / n);
+  }
+  return answer;
+}
