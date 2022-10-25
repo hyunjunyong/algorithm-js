@@ -287,3 +287,54 @@ function solution(my_string) {
     .sort((a, b) => a - b)
     .map((e) => (e = Number(e)));
 }
+
+// 배열의 유사도
+function solution(s1, s2) {
+  return s1.filter((e) => s2.indexOf(e) !== -1).length;
+}
+
+// 개미 군단
+function solution(hp) {
+  let sum = 0;
+  for (let i = 5; i >= 1; i--) {
+    sum += parseInt(hp / i);
+    hp = hp % i;
+    i--;
+  }
+  return sum;
+}
+
+// 숨어있는 숫자의 덧셈 (1)
+function solution(my_string) {
+  return Array.from(my_string.replace(/[^0-9]/g, '')).reduce(
+    (acc, cur) => parseInt(acc) + parseInt(cur)
+  );
+}
+
+// 숫자찾기
+function solution(num, k) {
+  for (let i = 0; i < [...String(num)].length; i++) {
+    if (parseInt([...String(num)][i]) === k) {
+      answer = i + 1;
+      break;
+    } else answer = -1;
+  }
+  return answer;
+}
+
+//직각삼각형 출력하기
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let input = [];
+
+rl.on('line', function (line) {
+  input = line.split(' ');
+}).on('close', function () {
+  for (let i = 1; i <= Number(input[0]); i++) {
+    console.log('*'.repeat(i));
+  }
+});
