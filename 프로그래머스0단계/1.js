@@ -412,3 +412,37 @@ function solution(box, n) {
   }
   return answer;
 }
+
+// 최댓값 만들기 (2)
+function solution(numbers) {
+  numbers.sort((a, b) => b - a);
+  return numbers[0] * numbers[1] >
+    numbers[numbers.length - 1] * numbers[numbers.length - 2]
+    ? numbers[0] * numbers[1]
+    : numbers[numbers.length - 1] * numbers[numbers.length - 2];
+}
+
+// 피자 나눠 먹기 (2) 최소공배수
+function solution(n) {
+  let answer = 1;
+  for (let i = 1; i <= n; i++) {
+    if (n % i === 0 && 6 % i === 0) {
+      answer = i;
+    }
+  }
+  return n / answer;
+}
+
+// 암호 해독
+function solution(cipher, code) {
+  answer = [];
+  answer = [...cipher].filter((e, index) => {
+    return (index + 1) % code === 0;
+  });
+  return answer.join('');
+}
+
+// 중복된 문자 제거
+function solution(my_string) {
+  return [...new Set([...my_string])].join('');
+}
