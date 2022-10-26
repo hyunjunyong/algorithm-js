@@ -517,3 +517,44 @@ function solution(letter) {
     .map((l) => morse[l])
     .join('');
 }
+
+//합성수 찾기
+function solution(n) {
+  let sum = 0;
+  var answer = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (i % j === 0) sum++;
+    }
+    if (sum >= 3) answer++;
+    sum = 0;
+  }
+  return answer;
+}
+
+// 종이 자르기
+function solution(M, N) {
+  function solution(M, N) {
+    return M * N - 1;
+  }
+}
+
+// k의 개수
+function solution(i, j, k) {
+  let a = '';
+  for (i; i <= j; i++) {
+    a += i;
+  }
+  return a.split(k).length - 1;
+}
+
+// 팩토리얼
+function solution(n) {
+  var answer = 1;
+  let i = 0;
+  while (n >= answer) {
+    i++;
+    answer *= i;
+  }
+  return i - 1;
+}
