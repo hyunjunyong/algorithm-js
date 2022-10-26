@@ -446,3 +446,74 @@ function solution(cipher, code) {
 function solution(my_string) {
   return [...new Set([...my_string])].join('');
 }
+
+// 2차원으로 만들기
+function solution(num_list, n) {
+  var answer = [];
+  var answer1 = [];
+  for (let i = 0; i < num_list.length; i++) {
+    answer.push(num_list[i]);
+    if ((i + 1) % n === 0) {
+      answer1.push(answer);
+      answer = [];
+    }
+  }
+  return answer1;
+}
+
+// 잘라서 배열로 저장하기
+function solution(my_str, n) {
+  var answer = [];
+  answer = [...my_str];
+  let answer1 = [];
+  let answer2 = [];
+  for (let i = 0; i < answer.length; i++) {
+    answer1.push(answer[i]);
+    if ((i + 1) % n === 0) {
+      answer2.push(answer1.join(''));
+      answer1 = [];
+    }
+  }
+  return answer1.length ? [...answer2, answer1.join('')] : answer2;
+}
+
+// A로 B 만들기
+function solution(before, after) {
+  return [...before].sort().join('') === [...after].sort().join('') ? 1 : 0;
+}
+
+// 모스부호
+function solution(letter) {
+  const morse = {
+    '.-': 'a',
+    '-...': 'b',
+    '-.-.': 'c',
+    '-..': 'd',
+    '.': 'e',
+    '..-.': 'f',
+    '--.': 'g',
+    '....': 'h',
+    '..': 'i',
+    '.---': 'j',
+    '-.-': 'k',
+    '.-..': 'l',
+    '--': 'm',
+    '-.': 'n',
+    '---': 'o',
+    '.--.': 'p',
+    '--.-': 'q',
+    '.-.': 'r',
+    '...': 's',
+    '-': 't',
+    '..-': 'u',
+    '...-': 'v',
+    '.--': 'w',
+    '-..-': 'x',
+    '-.--': 'y',
+    '--..': 'z',
+  };
+  return letter
+    .split(' ')
+    .map((l) => morse[l])
+    .join('');
+}
