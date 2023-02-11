@@ -558,3 +558,34 @@ function solution(n) {
   }
   return i - 1;
 }
+
+// 가까운 수
+function solution(array, n) {
+  array.push(n);
+  array.sort((a, b) => a - b);
+  let num = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === n) {
+      num = i;
+    }
+  }
+  if (array[num] === array[array.length - 1]) return array[num - 1];
+  else if (array[num] === array[0]) return array[num + 1];
+  else {
+    return array[num] - array[num - 1] <= array[num + 1] - array[num]
+      ? array[num - 1]
+      : array[num + 1];
+  }
+}
+
+// 이진수 더하기
+function solution(bin1, bin2) {
+  return (parseInt(bin1, 2) + parseInt(bin2, 2)).toString(2);
+}
+
+// 진료 순서 정하기
+function solution(emergency) {
+  var answer = [];
+  answer = emergency.sort((a, b) => b - a);
+  return answer;
+}
