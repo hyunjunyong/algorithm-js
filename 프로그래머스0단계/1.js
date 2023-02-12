@@ -604,3 +604,20 @@ function solution(s) {
   });
   return answer2.sort().join('');
 }
+
+//소인수 분해
+function solution(n) {
+  var answer = [];
+  while (n > 2) {
+    let i = 2;
+    if (n % i === 0) {
+      answer.push(i);
+      n = n / 2;
+      i = 2;
+    } else {
+      i++;
+    }
+  }
+  // return [...new Set(answer)];
+  return answer;
+}
