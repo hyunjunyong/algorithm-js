@@ -589,3 +589,18 @@ function solution(emergency) {
   answer = emergency.sort((a, b) => b - a);
   return answer;
 }
+
+//한 번만 등장한 문자
+function solution(s) {
+  let answer1 = [...new Set(s)];
+  var answer = [];
+  var answer2 = [];
+  answer = [...s];
+  for (let i = 0; i < answer1.length; i++) {
+    answer.splice(answer.indexOf(answer1[i]), 1);
+  }
+  answer1.map((e) => {
+    if (!answer.includes(e)) answer2.push(e);
+  });
+  return answer2.sort().join('');
+}
