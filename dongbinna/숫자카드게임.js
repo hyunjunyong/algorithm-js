@@ -1,6 +1,8 @@
 function resolve(n, m, array) {
   let leastNumber = [];
   for (let i = 0; i < n; i++) {
+    // Math.min(...array[i])
+    // Math.max(...array[i])
     array[i].sort((a, b) => a - b);
     leastNumber.push(array[i][0]);
   }
