@@ -1,7 +1,7 @@
 function solution(balls, share) {
   var answer = 0;
   answer = factorial(balls) / (factorial(balls - share) * factorial(share));
-  return answer;
+  return Math.round(answer);
 }
 
 function factorial(n) {
@@ -15,4 +15,4 @@ function factorial(n) {
   }
 }
 
-console.log(solution());
+console.log(solution(5, 4));
