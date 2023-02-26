@@ -14,3 +14,13 @@ function solution(spell, dic) {
 }
 
 console.log(solution(['z', 'd', 'x'], ['def', 'dww', 'dzx', 'loveaw']));
+
+// function solution(spell, dic) {
+//     return dic.filter(n => {
+//         let bool = true;
+//         spell.forEach(m => {
+//             if(!n.includes(m)) bool = false
+//         })
+//         return bool
+//     }).length > 0 ? 1 : 2
+// }
