@@ -16,15 +16,16 @@ function solution(keyinput, board) {
         answer[0] = Number(answer[0]) + 1;
         break;
     }
+    if ((Number(board[0]) - 1) / 2 < Math.abs(answer[0]))
+      answer[0] > 0
+        ? (answer[0] = (Number(board[0]) - 1) / 2)
+        : (answer[0] = ((Number(board[0]) - 1) / 2) * -1);
+    if (Number(board[1] - 1) / 2 < Math.abs(answer[1]))
+      answer[1] > 0
+        ? (answer[1] = (Number(board[1]) - 1) / 2)
+        : (answer[1] = ((Number(board[1]) - 1) / 2) * -1);
   }
-  if ((Number(board[0]) - 1) / 2 < Math.abs(answer[0]))
-    answer[0] > 0
-      ? (answer[0] = (Number(board[0]) - 1) / 2)
-      : (answer[0] = ((Number(board[0]) - 1) / 2) * -1);
-  if (Number(board[1] - 1) / 2 < Math.abs(answer[1]))
-    answer[1] > 0
-      ? (answer[1] = (Number(board[1]) - 1) / 2)
-      : (answer[1] = ((Number(board[1]) - 1) / 2) * -1);
+
   return answer;
 }
 
@@ -35,3 +36,8 @@ console.log(
   )
 );
 // 기대값 = [2,0]
+// solution(
+//   ['left', 'left', 'left', 'left', 'right', 'right', 'right', 'right'],
+//   [5, 5]
+// )'
+// 끝에서 끝으로 가는것도 생각해야됨
