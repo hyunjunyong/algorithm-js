@@ -13,3 +13,5 @@ function solution(A, B) {
 }
 
 console.log(solution('hello', 'ohell'));
+
+// let solution = (a, b) => (b + b).indexOf(a);
