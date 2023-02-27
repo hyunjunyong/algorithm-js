@@ -9,3 +9,8 @@ function solution(chicken) {
 }
 
 console.log(solution(100));
+
+// function solution(chicken) {
+//   var answer = parseInt((chicken-1) / 9);
+//   return answer;
+// }
