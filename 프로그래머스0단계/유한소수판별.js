@@ -12,3 +12,7 @@ function solution(a, b) {
 }
 
 console.log(solution(7, 20));
+
+// function solution(a, b) {
+//     return Number((a/b).toFixed(10)) == a/b ? 1 : 2
+// }
