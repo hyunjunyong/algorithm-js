@@ -9,3 +9,6 @@ function solution(a, b, n) {
 
 console.log(solution(2, 1, 20));
 console.log(solution(3, 1, 20));
+
+// solution = (a, b, n) => Math.floor(Math.max(n - b, 0) / (a - b)) * b;
+// 다른풀이인데 이해안감
